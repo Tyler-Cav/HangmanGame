@@ -1,0 +1,15 @@
+{
+  "name": "hangmangame",
+  "version": "1.0.0",
+  "description": "HangmanGame",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.23"
+  }
+}
