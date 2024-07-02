@@ -22,7 +22,11 @@ inquirer
     }
   ])
   .then((response) => {
-    if (hangmanWordSelector.includes(response.guess)) {
+    if (response.guess.length !== 1) {
+      console.log('You can only select one letter at a time')
+      hangman()
+    }
+    else if (hangmanWordSelector.includes(response.guess)) {
         for (let i = 0; i < hangmanWordSelector.length; i++) {
             response.guess === hangmanWordSelector[i] ? playerGuessSameIndex[i] = response.guess : null
         }
@@ -45,5 +49,4 @@ inquirer
     }
   })
 }
-
 hangman()
