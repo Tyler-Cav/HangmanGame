@@ -30,11 +30,20 @@ inquirer
         for (let i = 0; i < hangmanWordSelector.length; i++) {
             response.guess === hangmanWordSelector[i] ? playerGuessSameIndex[i] = response.guess : null
         }
+        let rejoin = playerGuessSameIndex.join (' ')
+        if (rejoin.includes('_') === false) {
+          console.log('')
+          console.log('Congrats, You\'ve Won!')
+          console.log(`The word was ${hangmanWordSelector}`)
+          console.log('')
+        }
+        else {
         console.log('')
         console.log(`Great! You stil have ${guessesRemain} guesses remaining`)
         console.log(playerGuessSameIndex.join(' '))
         console.log('')
         hangman()
+      }
     }
     else if (guessesRemain > 1) {
         guessesRemain--
