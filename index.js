@@ -48,13 +48,18 @@ inquirer
     else if (guessesRemain > 1) {
         guessesRemain--
         console.log('')
-        console.log(`Incorrect, you have ${guessesRemain} guesses remaining`)
+        if (guessesRemain === 1) {
+            console.log(`Incorrect, you have ${guessesRemain} guess remaining`)
+        } else{
+            console.log(`Incorrect, you have ${guessesRemain} guesses remaining`)
+        }
+
         console.log(playerGuessSameIndex.join(' '))
         console.log('')
         hangman()
     }
     else {
-        console.log('No more guesses, thanks for playing')
+        console.log(`Sorry! You're all out of guesses. The word was ${hangmanWordSelector}. Thanks for playing`)
     }
   })
 }
