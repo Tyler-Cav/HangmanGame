@@ -2,7 +2,7 @@ import inquirer from 'inquirer';
 
 let wordArray = ['test', 'help', 'trying', 'quiz', 'exam']
 let hangmanWordSelector = wordArray[Math.floor(Math.random() * wordArray.length)]
-let guessesRemain = 5
+let guessesRemain = 7
 let playerGuess = ''
 for (let i = 0; i < hangmanWordSelector.length; i++) {
     playerGuess += '_ '
