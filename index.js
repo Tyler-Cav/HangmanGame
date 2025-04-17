@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 
-let wordArray = ['helolo', 'help', 'trying']
+let wordArray = ['test', 'help', 'trying', 'quiz', 'exam']
 let hangmanWordSelector = wordArray[Math.floor(Math.random() * wordArray.length)]
 let guessesRemain = 5
 let playerGuess = ''
@@ -39,7 +39,7 @@ inquirer
         }
         else {
         console.log('')
-        console.log(`Great! You stil have ${guessesRemain} guesses remaining`)
+        console.log(`Great! You still have ${guessesRemain} guesses remaining`)
         console.log(playerGuessSameIndex.join(' '))
         console.log('')
         hangman()
